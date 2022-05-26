@@ -28,6 +28,12 @@ App.getInitialProps = async (ctx) => {
       contactButton: {
         populate: '*',
       },
+      contactOptions: {
+        populate: '*',
+      },
+      footerLinks: {
+        populate: '*',
+      },
     },
   })
 

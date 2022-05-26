@@ -1,0 +1,54 @@
+// ==========================================================================
+// #SPACERS
+// ==========================================================================
+
+// Adds spacer to the element
+@mixin _spacer($value, $direction, $property) {
+  @if ($property == margin) {
+    @if index(top left, $direction) {
+      &:not(:first-child) {
+        #{$property}-#{$direction}: $value;
+      }
+    } @else {
+      &:not(:last-child) {
+        #{$property}-#{$direction}: $value;
+      }
+    }
+  } @else {
+    #{$property}-#{$direction}: $value;
+  }
+}
+
+// Adds fixed spacer to the element
+@function spacer-fixed($size: 1, $spacer: var(--spacer)) {
+  @return $size * $spacer;
+}
+
+@mixin spacer-fixed($size: 1, $direction: 'top', $property: 'margin', $spacer: var(--spacer)) {
+  @include _spacer(spacer-fixed($size, $spacer), $direction, $property);
+}
+
+// Adds relative spacer to the element
+@function spacer-relative($size: 1, $line-height: var(--font-line-height)) {
+  @return $line-height * $size * 1em;
+}
+
+@mixin spacer-relative($size: 1, $direction: 'top', $property: 'margin', $line-height: var(--font-line-height)) {
+  @include _spacer(spacer-relative($size, $line-height), $direction, $property);
+}
+
+// Adds clamped spacer to the element
+@function spacer-clamped($size: 1, $scale: 2vw, $spacer: var(--spacer)) {
+  $clamp-min: calc($spacer * $size * 0.5);
+  $clamp-max: calc($spacer * $size);
+
+  @return clamp(
+    #{if($size < 0, $clamp-max, $clamp-min)},
+    #{$size} * #{$scale},
+    #{if($size < 0, $clamp-min, $clamp-max)}
+  );
+}
+
+@mixin spacer-clamped($size: 1, $direction: 'top', $property: 'margin', $scale: 2vw, $spacer: var(--spacer)) {
+  @include _spacer(spacer-clamped($size, $scale, $spacer), $direction, $property);
+}

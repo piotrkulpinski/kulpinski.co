@@ -3,6 +3,7 @@ import Container from '@/components/Container'
 import Overlay from '@/components/Overlay'
 import Button from '@/components/partials/Button'
 import Logo from '@/components/partials/Logo'
+import Nav from '@/components/partials/Nav'
 import Hamburger from '@/components/partials/Hamburger'
 import styles from '@/styles/modules/Header.module.scss'
 import { GlobalContext } from '@/pages/_app'
@@ -26,6 +27,7 @@ export default function Header() {
       <Container>
         <div className={styles.headerInner}>
           <Logo />
+          <Nav items={['About', 'Work', 'Testimonials']} />
           <Hamburger toggle="nav" />
 
           {contactButton && <div className={styles.headerCta}>

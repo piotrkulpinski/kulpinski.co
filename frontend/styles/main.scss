@@ -1,13 +1,23 @@
 @import 'variables.scss';
 @import 'reset.scss';
+@import 'tools/breakpoints.scss';
+@import 'tools/dimmer.scss';
+@import 'tools/hidden.scss';
+@import 'tools/spacers.scss';
+@import 'utils/display.scss';
+@import 'utils/hide.scss';
 
 body {
   background-color: var(--color-white);
   color: var(--font-color);
   font-family: var(--font-family);
-  font-size: var(--font-size);
+  font-size: calc(var(--font-size) * 0.9);
   font-weight: var(--font-weight);
   line-height: var(--font-line-height);
+
+  @include bp(md) {
+    font-size: var(--font-size);
+  }
 
   &.is-loading::before {
     content: '';

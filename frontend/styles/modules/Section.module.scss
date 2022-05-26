@@ -1,0 +1,52 @@
+@import '@/styles/tools/breakpoints.scss';
+@import '@/styles/tools/spacers.scss';
+
+.section {
+  --section-spacing: #{spacer-clamped(5)};
+
+  position: relative;
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+
+  &:only-child {
+    flex: 1;
+  }
+
+  .c-page-head + .o-wrapper &:first-child {
+    &::before {
+      content: '';
+      display: block;
+      height: 6.5rem;
+
+      @include bp(md) {
+        height: 6.8rem;
+      }
+
+      @include bp(lg) {
+        height: 10.8rem;
+      }
+    }
+  }
+}
+
+.section--white {
+  & + & {
+    padding-top: 0;
+  }
+}
+
+.section--dark {
+  --button-bg-color: var(--color-orange);
+  --button-color: var(--color-navy);
+
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.section--light {
+  background-color: var(--color-sand);
+}
+
+.o-section__wrapper {
+  max-width: var(--content-width);
+}

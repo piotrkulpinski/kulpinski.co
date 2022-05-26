@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_footer_links",
+  "info": {
+    "displayName": "footerLinks",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.contact-button"
+    }
+  }
+}

@@ -58,6 +58,27 @@
       },
       "type": "string",
       "required": true
+    },
+    "contactOptions": {
+      "displayName": "contactOptions",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.contact-options"
+    },
+    "footerLinks": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.contact-button"
     }
   }
 }
