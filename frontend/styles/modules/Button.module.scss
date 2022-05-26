@@ -1,0 +1,47 @@
+.button {
+  position: relative;
+  display: inline-block;
+  min-width: 16rem;
+  padding: 1em 2.5em;
+  margin: 0.5rem;
+  background-color: var(--button-bg-color, var(--color-black));
+  color: var(--button-color, var(--color-white));
+  font-family: var(--font-space);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.75px;
+  text-align: center;
+  white-space: nowrap;
+  backface-visibility: hidden;
+
+  // @include bp(md) {
+  //   min-width: 20rem;
+  //   font-size: 1.6rem;
+  // }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -0.5rem;
+    border: 2px solid var(--button-bg-color, var(--color-black));
+    transition-property: border-width, border-color;
+    transition-duration: var(--transition-duration);
+  }
+
+  &:hover {
+    &::before {
+      border-width: 7px;
+    }
+  }
+}
+
+// Sizes
+.button--sm {
+  min-width: 0;
+  padding: 0.75em 1.5em;
+
+  // @include bp(md) {
+  //   font-size: 1.4rem;
+  // }
+}

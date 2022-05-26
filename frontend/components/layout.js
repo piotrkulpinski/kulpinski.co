@@ -1,10 +1,11 @@
-import Nav from "./nav"
+import Header from '@/components/Header'
+import styles from '@/styles/modules/Layout.module.scss'
 
-const Layout = ({ children, categories, seo }) => (
-  <>
-    <Nav categories={categories} />
-    {children}
-  </>
-)
-
-export default Layout
+export default function Layout({ children }) {
+  return (
+    <div className={styles.layout}>
+      <Header />
+      <main>{children}</main>
+    </div>
+  )
+}

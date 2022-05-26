@@ -1,49 +1,37 @@
-import App from "next/app"
-import Head from "next/head"
-import "../assets/css/style.css"
-import { createContext } from "react"
-import { fetchAPI } from "../lib/api"
-import { getStrapiMedia } from "../lib/media"
+import '@/styles/main.scss'
+import { createContext } from 'react'
+import { fetchAPI } from '@/lib/api'
+import Meta from '@/components/Meta'
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
 
-const MyApp = ({ Component, pageProps }) => {
-  const { global } = pageProps
-
+function App({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <link
-          rel="shortcut icon"
-          href={getStrapiMedia(global.attributes.favicon)}
-        />
-      </Head>
-      <GlobalContext.Provider value={global.attributes}>
+      <Meta />
+
+      <GlobalContext.Provider value={pageProps.global.attributes}>
         <Component {...pageProps} />
       </GlobalContext.Provider>
     </>
   )
 }
 
-// getInitialProps disables automatic static optimization for pages that don't
-// have getStaticProps. So article, category and home pages still get SSG.
-// Hopefully we can replace this with getStaticProps once this issue is fixed:
-// https://github.com/vercel/next.js/discussions/10949
-MyApp.getInitialProps = async (ctx) => {
-  // Calls page's `getInitialProps` and fills `appProps.pageProps`
-  const appProps = await App.getInitialProps(ctx)
+App.getInitialProps = async (ctx) => {
   // Fetch global site settings from Strapi
-  const globalRes = await fetchAPI("/global", {
+  const globalRes = await fetchAPI('/global', {
     populate: {
-      favicon: "*",
       defaultSeo: {
-        populate: "*",
+        populate: '*',
+      },
+      contactButton: {
+        populate: '*',
       },
     },
   })
-  // Pass the data to our page via props
-  return { ...appProps, pageProps: { global: globalRes.data } }
+
+  return { pageProps: { global: globalRes.data } }
 }
 
-export default MyApp
+export default App

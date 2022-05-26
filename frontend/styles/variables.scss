@@ -1,0 +1,45 @@
+/*
+** Variables
+** -----------------------------------------------------------------------------*/
+
+:root {
+  --transition-duration: 0.25s;
+
+  /* Colors */
+  --color-black: #14151A;
+  --color-navy: #23232D;
+  --color-green: #DAE4E5;
+  --color-orange: #E2C398;
+  --color-white: #F8F4F2;
+
+  --color-success: #66A000;
+  --color-error: #DC706C;
+
+  /* Typography */
+  --font-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial',
+  sans-serif;
+  --font-public: 'Public Sans', var(--font-sans-serif);
+  --font-space: 'Space Grotesk', var(--font-sans-serif);
+
+  --font-color: var(--color-navy);
+  --font-family: var(--font-public);
+  --font-weight: 400;
+  --font-size: 2em;
+  --font-line-height: 1.6;
+  --font-letter-spacing: 0;
+
+  /* Layers */
+  --layer-negative: -1;
+  --layer-neutral: 0;
+  --layer-base: 1;
+  --layer-utils: 5;
+  --layer-head: 10;
+  --layer-overlay: 15;
+  --layer-popup: 20;
+
+  /* Layout */
+  --column-gutter: clamp(2rem, 2.5vw, 3rem);
+  --container-width: 120rem;
+  --container-gutter: clamp(2.4rem, 5vw, 6rem);
+  --content-width: 80rem;
+}

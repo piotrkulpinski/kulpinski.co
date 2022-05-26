@@ -1,0 +1,27 @@
+@import 'variables.scss';
+@import 'reset.scss';
+
+body {
+  background-color: var(--color-white);
+  color: var(--font-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--font-line-height);
+
+  &.is-loading::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: var(--layer-popup);
+    background-image: url('/loader.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

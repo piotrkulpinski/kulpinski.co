@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_quotes",
+  "info": {
+    "displayName": "quote",
+    "icon": "quote-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

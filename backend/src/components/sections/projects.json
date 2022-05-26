@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_projects",
+  "info": {
+    "displayName": "projects",
+    "icon": "network-wired"
+  },
+  "options": {},
+  "attributes": {
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

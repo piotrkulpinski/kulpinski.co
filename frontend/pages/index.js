@@ -1,31 +1,19 @@
-import React from "react"
-import Articles from "../components/articles"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import { fetchAPI } from "../lib/api"
+import Layout from "@/components/Layout"
+import Seo from "@/components/Seo"
+import { fetchAPI } from "@/lib/api"
 
-const Home = ({ articles, categories, homepage }) => {
+export default function Home ({ home }) {
   return (
-    <Layout categories={categories}>
-      <Seo seo={homepage.attributes.seo} />
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
-          <h1>{homepage.attributes.hero.title}</h1>
-          <Articles articles={articles} />
-        </div>
-      </div>
+    <Layout>
+      <Seo seo={home.attributes.seo} />
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  // Run API calls in parallel
-  const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
-    fetchAPI("/articles", { populate: "*" }),
-    fetchAPI("/categories", { populate: "*" }),
-    fetchAPI("/homepage", {
+  const [homeRes] = await Promise.all([
+    fetchAPI("/home", {
       populate: {
-        hero: "*",
         seo: { populate: "*" },
       },
     }),
@@ -33,12 +21,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      articles: articlesRes.data,
-      categories: categoriesRes.data,
-      homepage: homepageRes.data,
+      home: homeRes.data,
     },
     revalidate: 1,
   }
 }
-
-export default Home

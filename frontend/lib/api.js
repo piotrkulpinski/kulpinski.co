@@ -1,4 +1,4 @@
-import qs from "qs"
+import qs from 'qs'
 
 /**
  * Get full Strapi URL from path
@@ -23,6 +23,7 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
   const mergedOptions = {
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `bearer ${process.env.API_TOKEN}`
     },
     ...options,
   }

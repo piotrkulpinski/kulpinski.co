@@ -1,0 +1,86 @@
+/*
+** Reset
+** -----------------------------------------------------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+}
+
+:root {
+  font-size: 62.5%;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a,
+button,
+[type='button'] {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition-duration: var(--transition-duration);
+  transition-property: color, background-color, border, outline, box-shadow, opacity, outline, transform;
+}
+
+button,
+[type='button'] {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  appearance: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+strong {
+  font-weight: 700;
+}

@@ -1,0 +1,100 @@
+.hamburger {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  > span {
+    margin-right: 0.75em;
+  }
+
+  &:hover {
+    > span {
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.hamburgerIcon {
+  // Variables
+  --hamburger-width: 2.5rem;
+  --hamburger-height: 2rem;
+  --hamburger-weight: 2px;
+  --hamburger-color: currentColor;
+  --hamburger-duration: var(--transition-duration);
+  --hamburger-radius: 3px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: var(--hamburger-width);
+  height: var(--hamburger-width);
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  > * {
+    position: relative;
+    height: var(--hamburger-weight);
+    transition-property: color, background-color;
+    transition-duration: var(--hamburger-duration);
+
+    .has-nav-open & {
+      background-color: transparent;
+    }
+
+    &,
+    &::before,
+    &::after {
+      display: block;
+      width: 100%;
+      background-color: var(--hamburger-color);
+      border-radius: var(--hamburger-radius);
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 75%;
+      transition:
+        top var(--hamburger-duration) var(--hamburger-duration),
+        bottom var(--hamburger-duration) var(--hamburger-duration),
+        width var(--hamburger-duration) var(--hamburger-duration),
+        transform var(--hamburger-duration) 0s,
+        background-color var(--hamburger-duration) 0s;
+
+      .has-nav-open & {
+        // Revert the delays
+        width: 100%;
+        transition:
+          top var(--hamburger-duration) 0s,
+          bottom var(--hamburger-duration) 0s,
+          width var(--hamburger-duration) 0s,
+          transform var(--hamburger-duration) var(--hamburger-duration),
+          background-color var(--hamburger-duration) var(--hamburger-duration);
+      }
+    }
+
+    &::before {
+      top: calc(((var(--hamburger-height) * 0.5) - (var(--hamburger-weight) * 0.5)) * -1);
+
+      .has-nav-open & {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    &::after {
+      bottom: calc(((var(--hamburger-height) * 0.5) - (var(--hamburger-weight) * 0.5)) * -1);
+
+      .has-nav-open & {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

@@ -2,13 +2,23 @@
   "collectionName": "components_decoration_heroes",
   "info": {
     "name": "Hero",
-    "icon": "address-card"
+    "icon": "address-card",
+    "displayName": "hero",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string",
       "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.contact-button"
     }
   }
 }
