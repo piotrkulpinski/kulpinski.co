@@ -5,8 +5,8 @@ export default function Nav({ items, extraClass }) {
   return (
     <>
       {items && <nav className={`${styles.nav} ${extraClass ?? ''}`}>
-        {items.map((item) =>
-          <Link href="#">
+        {items.map((item, index) =>
+          <Link href="#" key={index}>
             <a>{item}</a>
           </Link>
         )}

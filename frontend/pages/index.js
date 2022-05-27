@@ -1,11 +1,13 @@
 import Layout from "@/components/Layout"
 import Seo from "@/components/Seo"
+import SectionManager from "@/components/SectionManager"
 import { fetchAPI } from "@/lib/api"
 
 export default function Home ({ home }) {
   return (
     <Layout>
       <Seo seo={home.attributes.seo} />
+      <SectionManager sections={home.attributes.sections} />
     </Layout>
   )
 }
@@ -15,6 +17,7 @@ export async function getStaticProps() {
     fetchAPI("/home", {
       populate: {
         seo: { populate: "*" },
+        sections: { populate: "*" },
       },
     }),
   ])

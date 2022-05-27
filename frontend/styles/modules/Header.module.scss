@@ -5,8 +5,8 @@
 @import '@/styles/tools/breakpoints.scss';
 
 .header {
-  // --button-bg-color: var(--color-white);
-  // --button-color: var(--color-navy);
+  --button-bg-color: var(--color-white);
+  --button-color: var(--color-navy);
 
   position: absolute;
   top: 0;
@@ -15,7 +15,7 @@
   z-index: var(--layer-head);
   padding-top: clamp(2rem, 4vw, 4rem);
   padding-bottom: clamp(2rem, 4vw, 4rem);
-  // color: var(--color-white);
+  color: var(--color-white);
   transition-property: padding, box-shadow;
   transition-duration: var(--transition-duration);
 

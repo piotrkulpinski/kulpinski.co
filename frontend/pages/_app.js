@@ -1,20 +1,15 @@
 import '@/styles/main.scss'
 import { createContext } from 'react'
 import { fetchAPI } from '@/lib/api'
-import Meta from '@/components/Meta'
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
 
 function App({ Component, pageProps }) {
   return (
-    <>
-      <Meta />
-
-      <GlobalContext.Provider value={pageProps.global.attributes}>
-        <Component {...pageProps} />
-      </GlobalContext.Provider>
-    </>
+    <GlobalContext.Provider value={pageProps.global.attributes}>
+      <Component {...pageProps} />
+    </GlobalContext.Provider>
   )
 }
 
