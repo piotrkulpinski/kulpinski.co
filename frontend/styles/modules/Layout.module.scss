@@ -1,8 +1,11 @@
+/*
+** Layout
+** -----------------------------------------------------------------------------*/
+
 .layout {
   position: relative;
   z-index: var(--layer-base);
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
