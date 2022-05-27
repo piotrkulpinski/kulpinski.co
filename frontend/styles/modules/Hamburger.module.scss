@@ -98,3 +98,31 @@
     }
   }
 }
+
+.hamburgerIcon--open {
+  > * {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      // Revert the delays
+      width: 100%;
+      transition:
+        top var(--hamburger-duration) 0s,
+        bottom var(--hamburger-duration) 0s,
+        width var(--hamburger-duration) 0s,
+        transform var(--hamburger-duration) var(--hamburger-duration),
+        background-color var(--hamburger-duration) var(--hamburger-duration);
+    }
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

@@ -1,4 +1,5 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState, useCallback } from 'react'
+import cn from 'classnames'
 import Container from '@/components/Container'
 import Overlay from '@/components/Overlay'
 import Button from '@/components/partials/Button'
@@ -9,7 +10,10 @@ import styles from '@/styles/modules/Header.module.scss'
 import { GlobalContext } from '@/pages/_app'
 
 export default function Header() {
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false)
+  const toggleOverlay = useCallback(() => setIsOverlayOpen(!isOverlayOpen), [isOverlayOpen, setIsOverlayOpen])
   const { contactButton } = useContext(GlobalContext)
+  const menuItems = ['About', 'Work', 'Testimonials']
 
   useEffect(() => {
     window.addEventListener('scroll', isSticky)
@@ -23,12 +27,12 @@ export default function Header() {
   }
 
   return (
-    <div className={styles.header}>
+    <div className={cn(styles.header, { [styles['header--open']]: isOverlayOpen })}>
       <Container>
         <div className={styles.headerInner}>
           <Logo />
-          <Nav items={['About', 'Work', 'Testimonials']} />
-          <Hamburger toggle="nav" />
+          <Nav items={menuItems} extraClass="u-visible-xl-flex" />
+          <Hamburger isOverlayOpen={isOverlayOpen} clickHandler={toggleOverlay} />
 
           {contactButton && <div className={styles.headerCta}>
             <Button button={contactButton} size="sm" />
@@ -36,7 +40,7 @@ export default function Header() {
         </div>
       </Container>
 
-      <Overlay />
+      <Overlay items={menuItems} isOpen={isOverlayOpen} />
     </div>
   )
 }

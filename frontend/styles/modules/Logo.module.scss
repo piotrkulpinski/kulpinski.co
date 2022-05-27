@@ -17,6 +17,10 @@
     .is-sticky & {
       font-size: 2em;
     }
+
+    * {
+      fill: currentColor;
+    }
   }
 
   &[href]:hover {

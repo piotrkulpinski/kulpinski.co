@@ -1,3 +1,5 @@
+@import '@/styles/tools/breakpoints.scss';
+
 .header {
   // --button-bg-color: var(--color-white);
   // --button-color: var(--color-navy);
@@ -33,23 +35,23 @@
     transition-property: padding, box-shadow, transform;
     transition-duration: var(--transition-duration);
   }
+}
 
-  .has-nav-open & {
-    --button-bg-color: var(--color-white);
-    --button-color: var(--color-navy);
+.header--open {
+  --button-bg-color: var(--color-white);
+  --button-color: var(--color-navy);
 
-    position: fixed;
-    color: var(--color-white);
-    transform: translateY(0);
+  position: fixed;
+  color: var(--color-white);
+  transform: translateY(0);
 
-    // @include bp(xl) {
-    //   &.is-sticky {
-    //     --button-bg-color: var(--color-navy);
-    //     --button-color: var(--color-white);
+  @include bp(xl) {
+    &.is-sticky {
+      --button-bg-color: var(--color-navy);
+      --button-color: var(--color-white);
 
-    //     color: var(--color-navy);
-    //   }
-    // }
+      color: var(--color-navy);
+    }
   }
 }
 
