@@ -4,7 +4,7 @@
 
 @import '@/styles/tools/breakpoints.scss';
 
-.header {
+.base {
   --button-bg-color: var(--color-white);
   --button-color: var(--color-navy);
 
@@ -19,21 +19,6 @@
   transition-property: padding, box-shadow;
   transition-duration: var(--transition-duration);
 
-  &.is-sticky {
-    --button-bg-color: var(--color-navy);
-    --button-color: var(--color-white);
-
-    position: fixed;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    // background-color: rgba($color-white, 0.975);
-    // box-shadow: 0 2px 0 rgba($color-navy, 0.1);
-    background-color: var(--color-white);
-    box-shadow: 0 2px 0 var(--color-navy);
-    color: var(--color-navy);
-    transform: translateY(-15rem);
-  }
-
   &.is-condensed {
     transform: translateY(0);
     transition-property: padding, box-shadow, transform;
@@ -41,7 +26,22 @@
   }
 }
 
-.header--open {
+.sticky {
+  --button-bg-color: var(--color-navy);
+  --button-color: var(--color-white);
+
+  position: fixed;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  // background-color: rgba($color-white, 0.975);
+  // box-shadow: 0 2px 0 rgba($color-navy, 0.1);
+  background-color: var(--color-white);
+  box-shadow: 0 2px 0 var(--color-navy);
+  color: var(--color-navy);
+  transform: translateY(-100%);
+}
+
+.open {
   --button-bg-color: var(--color-white);
   --button-color: var(--color-navy);
 
@@ -59,7 +59,7 @@
   }
 }
 
-.headerInner {
+.inner {
   position: relative;
   z-index: var(--layer-base);
   display: flex;
@@ -69,7 +69,7 @@
   font-size: 0.9em;
 }
 
-.headerCta {
+.cta {
   margin-top: -0.5em;
   margin-bottom: -0.5em;
 }

@@ -4,19 +4,19 @@
 
 @import '@/styles/tools/breakpoints.scss';
 
-.footer {
+.base {
   display: flex;
   flex-direction: column;
   gap: calc(var(--section-spacing) * 0.5);
 }
 
-.footerContact {
+.contact {
   max-width: var(--content-width);
 }
 
-.footerLabel,
-.footerCopy,
-.footerBottom a {
+.label,
+.copy,
+.bottom a {
   opacity: 0.66;
 
   &[href]:hover {
@@ -24,7 +24,7 @@
   }
 }
 
-.footerCopy {
+.copy {
   width: 100%;
 
   @include bp(lg) {
@@ -32,14 +32,14 @@
   }
 }
 
-.footerBottom {
+.bottom {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5em 1.5em;
 }
 
-.footerSeparator {
+.separator {
   width: 100%;
   height: 2px;
   background-color: var(--color-white);

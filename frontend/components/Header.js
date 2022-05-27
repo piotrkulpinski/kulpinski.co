@@ -11,6 +11,7 @@ import { GlobalContext } from '@/pages/_app'
 
 export default function Header() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false)
+  const [isHeaderSticky, setIsHeaderSticky] = useState(false)
   const toggleOverlay = useCallback(() => setIsOverlayOpen(!isOverlayOpen), [isOverlayOpen, setIsOverlayOpen])
   const { contactButton } = useContext(GlobalContext)
   const menuItems = ['About', 'Work', 'Testimonials']
@@ -21,21 +22,19 @@ export default function Header() {
   })
 
   const isSticky = () => {
-    const header = document.querySelector(styles.header)
-    const scrollTop = window.scrollY
-    scrollTop >= 250 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky')
+    setIsHeaderSticky(window.scrollY >= 250)
   }
 
   return (
-    <div className={cn(styles.header, { [styles['header--open']]: isOverlayOpen })}>
+    <div className={cn(styles.base, { [styles.open]: isOverlayOpen, [styles.sticky]: isHeaderSticky })}>
       <Container>
-        <div className={styles.headerInner}>
+        <div className={styles.inner}>
           <Logo />
           <Nav items={menuItems} extraClass="u-visible-xl-flex" />
           <Hamburger isOverlayOpen={isOverlayOpen} clickHandler={toggleOverlay} />
 
-          {contactButton && <div className={styles.headerCta}>
-            <Button button={contactButton} size="sm" />
+          {contactButton && <div className={styles.cta}>
+            <Button button={contactButton} size="small" />
           </div>}
         </div>
       </Container>

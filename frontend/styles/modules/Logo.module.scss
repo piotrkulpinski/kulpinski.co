@@ -2,32 +2,32 @@
 ** Logo
 ** -----------------------------------------------------------------------------*/
 
-.logo {
+.base {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   margin-right: auto;
 
-  svg {
-    height: 1em;
-    width: 1em;
-    margin-top: -1em;
-    margin-bottom: -1em;
-    margin-right: 0.3em;
-    font-size: clamp(2em, 5vw, 2.5em);
-    transition-property: font-size;
-    transition-duration: var(--transition-duration);
-
-    .is-sticky & {
-      font-size: 2em;
-    }
-
-    * {
-      fill: currentColor;
-    }
-  }
-
   &[href]:hover {
     opacity: 0.75;
+  }
+}
+
+.media {
+  height: 1em;
+  width: 1em;
+  margin-top: -1em;
+  margin-bottom: -1em;
+  margin-right: 0.3em;
+  font-size: clamp(2em, 5vw, 2.5em);
+  transition-property: font-size;
+  transition-duration: var(--transition-duration);
+
+  .is-sticky & {
+    font-size: 2em;
+  }
+
+  * {
+    fill: currentColor;
   }
 }

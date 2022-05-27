@@ -19,6 +19,16 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.contact-button"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

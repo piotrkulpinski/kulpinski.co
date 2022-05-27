@@ -22,7 +22,7 @@ const getSectionComponent = ({ __component, ...rest }, index) => {
 
 const SectionManager = ({ sections }) => {
   return (
-    <div>{sections.map(getSectionComponent)}</div>
+    <>{sections.map(getSectionComponent)}</>
   )
 }
 

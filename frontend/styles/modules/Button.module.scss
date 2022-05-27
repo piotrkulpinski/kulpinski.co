@@ -4,7 +4,7 @@
 
 @import '@/styles/tools/breakpoints.scss';
 
-.button {
+.base {
   position: relative;
   display: inline-block;
   min-width: 16rem;
@@ -43,7 +43,7 @@
 }
 
 // Sizes
-.button--sm {
+.small {
   min-width: 0;
   padding: 0.75em 1.5em;
 

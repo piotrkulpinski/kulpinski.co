@@ -5,7 +5,7 @@
 @import '@/styles/tools/breakpoints.scss';
 @import '@/styles/tools/spacers.scss';
 
-.section {
+.base {
   --section-spacing: #{spacer-clamped(5)};
 
   position: relative;
@@ -33,13 +33,13 @@
   }
 }
 
-.section--white {
+.white {
   & + & {
     padding-top: 0;
   }
 }
 
-.section--dark {
+.dark {
   --button-bg-color: var(--color-orange);
   --button-color: var(--color-navy);
 
@@ -47,10 +47,6 @@
   color: var(--color-white);
 }
 
-.section--light {
+.light {
   background-color: var(--color-sand);
-}
-
-.o-section__wrapper {
-  max-width: var(--content-width);
 }
