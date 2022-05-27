@@ -1,10 +1,10 @@
 {
   "dependencies": {
     "@strapi/plugin-graphql": "^4.0.0",
-    "@strapi/plugin-i18n": "4.1.11",
+    "@strapi/plugin-i18n": "4.1.12",
     "@strapi/plugin-seo": "^1.7.3",
-    "@strapi/plugin-users-permissions": "4.1.11",
-    "@strapi/strapi": "4.1.11",
+    "@strapi/plugin-users-permissions": "4.1.12",
+    "@strapi/strapi": "4.1.12",
     "add": "^2.0.6",
     "better-sqlite3": "7.4.6",
     "lodash.set": "^4.3.2",
