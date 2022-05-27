@@ -15,10 +15,10 @@ export default function Footer() {
       <Container>
         <div className={styles.base}>
           {contactOptions && <>
-            <Heading size="h3">Have a project in mind? Let's connect.</Heading>
-
             <div className={styles.contact}>
+              <Heading size="h3">Have a project in mind? Let's connect.</Heading>
               <Contact options={contactOptions} />
+
             </div>
 
             <div className={styles.separator}></div>

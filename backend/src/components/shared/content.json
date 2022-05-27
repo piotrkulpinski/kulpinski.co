@@ -2,15 +2,16 @@
   "collectionName": "components_sections_contents",
   "info": {
     "displayName": "content",
-    "icon": "align-center",
+    "icon": "align-left",
     "description": ""
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "string"
+    },
     "content": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.content"
+      "type": "richtext"
     }
   }
 }

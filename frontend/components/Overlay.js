@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import cn from 'classnames'
-import Container from '@/components/Container';
-import Contact from '@/components/Contact';
-import Nav from '@/components/partials/Nav';
+import Container from '@/components/Container'
+import Contact from '@/components/Contact'
+import Nav from '@/components/partials/Nav'
 import styles from '@/styles/modules/Overlay.module.scss'
 import { GlobalContext } from '@/pages/_app'
 

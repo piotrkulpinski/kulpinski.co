@@ -30,7 +30,7 @@
 
 // Adds relative spacer to the element
 @function spacer-relative($size: 1, $line-height: var(--font-line-height)) {
-  @return $line-height * $size * 1em;
+  @return calc($line-height * $size * 1em);
 }
 
 @mixin spacer-relative($size: 1, $direction: 'top', $property: 'margin', $line-height: var(--font-line-height)) {

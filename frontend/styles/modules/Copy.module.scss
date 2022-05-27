@@ -1,0 +1,57 @@
+/*
+** Copy
+** -----------------------------------------------------------------------------*/
+
+@import '@/styles/tools/breakpoints.scss';
+@import '@/styles/tools/spacers.scss';
+@import '@/styles/placeholders/heading.scss';
+@import '@/styles/placeholders/underline.scss';
+
+.base {
+  @for $i from 1 through 5 {
+    h#{$i} {
+      @include spacer-relative;
+      @extend %heading !optional;
+      @extend %heading-h#{$i} !optional;
+    }
+  }
+
+  p, ul, ol, table, address, form {
+    &:not([class]) {
+      @include spacer-relative;
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul, ol {
+    padding-left: 1em;
+
+    &:not([class]) li {
+      @include spacer-relative;
+    }
+  }
+
+  a {
+    &:not([class]) {
+      @extend %underline;
+    }
+  }
+
+  img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+  }
+}

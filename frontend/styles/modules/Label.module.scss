@@ -1,0 +1,16 @@
+/*
+** Label
+** -----------------------------------------------------------------------------*/
+
+.base {
+  font-family: var(--font-space);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.66;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}

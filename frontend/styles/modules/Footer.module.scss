@@ -3,8 +3,10 @@
 ** -----------------------------------------------------------------------------*/
 
 @import '@/styles/tools/breakpoints.scss';
+@import '@/styles/placeholders/underline.scss';
 
-.base {
+.base,
+.contact {
   display: flex;
   flex-direction: column;
   gap: calc(var(--section-spacing) * 0.5);
@@ -12,6 +14,10 @@
 
 .contact {
   max-width: var(--content-width);
+
+  a {
+    @extend %underline;
+  }
 }
 
 .label,
