@@ -3,14 +3,18 @@
 ** -----------------------------------------------------------------------------*/
 
 .base {
-  display: flex;
-  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   gap: var(--column-gutter);
   max-width: var(--content-width);
 }
 
 .separated {
   gap: calc(var(--column-gutter) * 2);
+}
+
+.narrow {
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
 }
 
 .item {

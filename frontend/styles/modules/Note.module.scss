@@ -1,0 +1,13 @@
+/*
+** Note
+** -----------------------------------------------------------------------------*/
+
+@import '@/styles/tools/breakpoints.scss';
+@import '@/styles/tools/spacers.scss';
+
+.base {
+  @include spacer-fixed;
+  max-width: 38rem;
+  font-size: 1.3rem;
+  opacity: .66;
+}

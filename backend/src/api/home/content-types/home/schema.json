@@ -24,7 +24,9 @@
       "components": [
         "sections.content",
         "sections.hero",
-        "sections.projects"
+        "sections.projects",
+        "sections.testimonials",
+        "sections.cta"
       ]
     }
   }

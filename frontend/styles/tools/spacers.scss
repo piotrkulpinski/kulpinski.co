@@ -21,7 +21,7 @@
 
 // Adds fixed spacer to the element
 @function spacer-fixed($size: 1, $spacer: var(--spacer)) {
-  @return $size * $spacer;
+  @return calc($size * $spacer);
 }
 
 @mixin spacer-fixed($size: 1, $direction: 'top', $property: 'margin', $spacer: var(--spacer)) {
