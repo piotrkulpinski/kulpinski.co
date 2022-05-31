@@ -15,7 +15,7 @@ export default function Seo({ seo }) {
     // Add title suffix
     metaTitle: `${seoWithDefaults.metaTitle} | ${siteName}`,
     // Get full image URL
-    shareImage: getStrapiMedia(seoWithDefaults.shareImage),
+    shareImage: getStrapiMedia(seoWithDefaults.shareImage.data),
   }
 
   return (

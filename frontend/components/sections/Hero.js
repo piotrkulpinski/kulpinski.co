@@ -25,7 +25,7 @@ export default function Hero({ title, description, buttons, image }) {
           </div>
 
           {image && <div className={styles.media}>
-            <Image image={image} layout="raw" priority />
+            <Image image={image.data} layout="raw" priority />
           </div>}
         </div>
       </Container>

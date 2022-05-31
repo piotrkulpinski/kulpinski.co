@@ -10,6 +10,7 @@
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
     "strapi-plugin-menus": "^0.3.2",
+    "strapi-plugin-populate-deep": "^0.1.2",
     "yarn": "^1.22.18"
   },
   "name": "backend",

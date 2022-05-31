@@ -1,7 +1,7 @@
-import Layout from "@/components/Layout"
-import Seo from "@/components/Seo"
-import SectionManager from "@/components/SectionManager"
-import { fetchAPI } from "@/lib/api"
+import Layout from '@/components/Layout'
+import Seo from '@/components/Seo'
+import SectionManager from '@/components/SectionManager'
+import { fetchAPI } from '@/lib/api'
 
 export default function Home ({ home }) {
   return (
@@ -14,10 +14,10 @@ export default function Home ({ home }) {
 
 export async function getStaticProps() {
   const [homeRes] = await Promise.all([
-    fetchAPI("/home", {
+    fetchAPI('/home', {
       populate: {
-        seo: { populate: "*" },
-        sections: { populate: "*" },
+        seo: { populate: '*' },
+        sections: { populate: '*' },
       },
     }),
   ])

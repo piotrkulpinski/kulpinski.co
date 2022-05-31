@@ -4,6 +4,7 @@
  *  home controller
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const schema = require('../content-types/home/schema.json');
+const createPopulatedController = require('../../../helpers/populate');
 
-module.exports = createCoreController('api::home.home');
+module.exports = createPopulatedController('api::home.home', schema);

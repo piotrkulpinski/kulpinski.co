@@ -5,9 +5,9 @@ import qs from 'qs'
  * @param {string} path Path of the URL
  * @returns {string} Full Strapi URL
  */
-export function getStrapiURL(path = "") {
+export function getStrapiURL(path = '') {
   return `${
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
+    process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'
   }${path}`
 }
 
@@ -22,17 +22,15 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
   // Merge default and user options
   const mergedOptions = {
     headers: {
-      "Content-Type": "application/json",
-      "Authorization": `bearer ${process.env.API_TOKEN}`
+      'Content-Type': 'application/json',
+      'Authorization': `bearer ${process.env.API_TOKEN}`
     },
     ...options,
   }
 
   // Build request URL
   const queryString = qs.stringify(urlParamsObject)
-  const requestUrl = `${getStrapiURL(
-    `/api${path}${queryString ? `?${queryString}` : ""}`
-  )}`
+  const requestUrl = getStrapiURL(`/api${path}${queryString ? `?${queryString}` : ''}`)
 
   // Trigger API call
   const response = await fetch(requestUrl, mergedOptions)

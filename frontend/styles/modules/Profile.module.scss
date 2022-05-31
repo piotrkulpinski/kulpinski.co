@@ -1,0 +1,41 @@
+/*
+** Profile
+** -----------------------------------------------------------------------------*/
+
+@import '@/styles/tools/breakpoints.scss';
+
+.base {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-size: 0.9em;
+}
+
+.image {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  font-size: 6.4rem;
+
+  @include bp(md) {
+    font-size: 8rem;
+  }
+}
+
+.role {
+  opacity: 0.66;
+}
+
+.link {
+  opacity: 0.75;
+
+  &[href]:hover {
+    opacity: 1;
+  }
+}
+
+.meta {
+  display: flex;
+  gap: 0.25em;
+  font-size: 0.85em;
+}

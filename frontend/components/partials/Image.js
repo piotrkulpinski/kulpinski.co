@@ -1,8 +1,8 @@
 import NextImage from 'next/image'
 import { getStrapiMedia } from '@/lib/media'
 
-export default function Image({ image, layout, priority }) {
-  const { alternativeText, width, height } = image.data.attributes
+export default function Image({ image, layout, priority, className }) {
+  const { alternativeText, width, height } = image.attributes
 
   return (
     <NextImage
@@ -13,6 +13,7 @@ export default function Image({ image, layout, priority }) {
       priority={priority ?? false}
       src={getStrapiMedia(image)}
       alt={alternativeText}
+      className={className}
     />
   )
 }
