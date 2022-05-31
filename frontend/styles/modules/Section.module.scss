@@ -34,9 +34,15 @@
 }
 
 .white {
+  background-color: var(--color-white);
+
   & + & {
     padding-top: 0;
   }
+}
+
+.light {
+  background-color: var(--color-sand);
 }
 
 .dark {
@@ -45,8 +51,4 @@
 
   background-color: var(--color-navy);
   color: var(--color-white);
-}
-
-.light {
-  background-color: var(--color-sand);
 }

@@ -28,6 +28,10 @@
   }
 }
 
+.title {
+  max-width: 10em;
+}
+
 .copy {
   max-width: 24em;
   opacity: 0.75;
@@ -62,7 +66,7 @@
     margin-inline: auto;
     max-width: 45rem;
     height: auto;
-    filter: drop-shadow(0 2rem 5rem rgba(var(--color-orange), 0.25));
+    filter: drop-shadow(0 2rem 5rem rgba(255, 255, 255, 0.15));
 
     @include bp(lg) {
       position: absolute;

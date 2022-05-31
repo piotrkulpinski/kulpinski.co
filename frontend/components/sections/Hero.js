@@ -11,7 +11,7 @@ export default function Hero({ title, description, buttons, image }) {
       <Container>
         <div className={styles.base}>
           <div className={styles.content}>
-            <Heading size="h1" tag="h2">{title}</Heading>
+            <Heading size="h1" tag="h2" className={styles.title}>{title}</Heading>
 
             {description && <div className={`${styles.copy} c-copy u-visible-xl-block`}>
               <p>{description}</p>

@@ -1,0 +1,59 @@
+/*
+** Carousel
+** -----------------------------------------------------------------------------*/
+
+@import '@/styles/tools/breakpoints.scss';
+
+.base {
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  @include bp(md) {
+    padding-right: 10rem;
+  }
+
+  :global {
+    .flickity-viewport {
+      transition: height var(--transition-duration);
+    }
+
+    .flickity-prev-next-button {
+      display: none;
+      position: absolute;
+      top: 0;
+      z-index: var(--layer-utils);
+      width: auto;
+      height: auto;
+      color: var(--color-navy);
+      transform: none;
+
+      &[disabled] {
+        cursor: default;
+      }
+
+      &:hover {
+        background-color: transparent;
+        opacity: 0.75;
+      }
+    }
+
+    .flickity-prev-next-button.next {
+      right: 1rem;
+
+      @include bp(md) {
+        display: block
+      }
+    }
+
+    .flickity-button-icon {
+      position: static;
+      display: block;
+      height: 1em;
+      width: 1em;
+      font-size: 6rem;
+      fill: currentColor;
+      stroke: none;
+      pointer-events: none;
+    }
+  }
+}

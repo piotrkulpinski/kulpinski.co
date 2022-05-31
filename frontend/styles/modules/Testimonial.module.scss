@@ -11,18 +11,13 @@
   gap: clamp(1em, 3.75vw, 2em);
   width: 100%;
 
-  .flickity-enabled & {
+  :global(.flickity-enabled) & {
     padding-left: 1rem;
     padding-right: 1rem;
 
     @include bp(md) {
-      padding-right: calc(100% - 81rem);
+      padding-right: calc(100% - var(--content-width));
     }
-  }
-
-  &--center {
-    align-items: center;
-    text-align: center;
   }
 }
 

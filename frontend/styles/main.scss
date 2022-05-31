@@ -3,13 +3,14 @@
 ** Author: Piotr Kulpinski
 ** -----------------------------------------------------------------------------*/
 
+@import 'flickity/dist/flickity.min.css';
 @import 'variables.scss';
 @import 'reset.scss';
 @import 'utils/display.scss';
 @import 'utils/hide.scss';
 
 body {
-  background-color: var(--color-white);
+  background-color: var(--color-navy);
   color: var(--font-color);
   font-family: var(--font-family);
   font-size: calc(var(--font-size) * 0.9);
