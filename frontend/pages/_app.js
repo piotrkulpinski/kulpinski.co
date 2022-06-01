@@ -3,7 +3,7 @@ import { createContext } from 'react'
 import { fetchAPI } from '@/lib/api'
 
 // Store Strapi Global object in context
-export const GlobalContext = createContext({})
+export const GlobalContext = createContext()
 
 function App({ Component, pageProps }) {
   return (

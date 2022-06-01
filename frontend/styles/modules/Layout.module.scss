@@ -2,7 +2,35 @@
 ** Layout
 ** -----------------------------------------------------------------------------*/
 
+@import '@/styles/tools/breakpoints.scss';
+
 .base {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-navy);
+  color: var(--font-color);
+  font-family: var(--font-family);
+  font-size: calc(var(--font-size) * 0.9);
+  font-weight: var(--font-weight);
+  line-height: var(--font-line-height);
+
+  @include bp(md) {
+    font-size: var(--font-size);
+  }
+
+  &.is-loading::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: var(--layer-popup);
+    background-image: url('/loader.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.main {
   position: relative;
   z-index: var(--layer-base);
   flex: 1 0 auto;
