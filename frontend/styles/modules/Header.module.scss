@@ -3,38 +3,31 @@
 ** -----------------------------------------------------------------------------*/
 
 @import '@/styles/tools/breakpoints.scss';
+@import '@/styles/tools/spacers.scss';
 
 .base {
   --button-bg-color: var(--color-white);
   --button-color: var(--color-navy);
 
-  position: absolute;
+  position: fixed;
   inset: 0 0 auto;
   z-index: var(--layer-head);
-  padding-top: clamp(2rem, 4vw, 4rem);
-  padding-bottom: clamp(2rem, 4vw, 4rem);
+  padding-top: spacer-clamped(1.5);
+  padding-bottom: spacer-clamped(1.5);
   color: var(--color-white);
-  transition-property: padding, box-shadow, backdrop-filter;
+  transition-property: padding, background-color, box-shadow, backdrop-filter;
   transition-duration: var(--transition-duration);
-
-  &.is-condensed {
-    transform: translateY(0);
-    transition-property: padding, box-shadow, transform;
-    transition-duration: var(--transition-duration);
-  }
 }
 
-.sticky {
+.condensed {
   --button-bg-color: var(--color-navy);
   --button-color: var(--color-white);
 
-  position: fixed;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background-color: var(--color-white);
-  box-shadow: 0 2px 0 var(--color-navy);
+  padding-top: spacer-fixed(0.75);
+  padding-bottom: spacer-fixed(0.75);
+  background-color: rgba(248, 244, 242, 0.975);
+  box-shadow: 0 2px 0 rgba(35, 35, 45, 0.1);
   color: var(--color-navy);
-  transform: translateY(-100%);
   backdrop-filter: blur(5px);
 }
 
@@ -65,9 +58,4 @@
   align-items: center;
   gap: 0.5em clamp(1.5em, 6.5vw, 3em);
   font-size: 0.9em;
-}
-
-.cta {
-  margin-top: -0.5em;
-  margin-bottom: -0.5em;
 }

@@ -3,9 +3,9 @@ import Section from '@/components/Section'
 import Button from '@/components/partials/Button'
 import Note from '@/components/partials/Note'
 
-export default function Cta({ button, note }) {
+export default function Cta({ button, note, slug }) {
   return (
-    <Section>
+    <Section slug={slug}>
       <Container>
         <Button button={button} />
         {note && <Note note={note} />}

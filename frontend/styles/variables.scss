@@ -2,6 +2,9 @@
 ** Variables
 ** -----------------------------------------------------------------------------*/
 
+@import '@/styles/tools/breakpoints.scss';
+@import '@/styles/tools/spacers.scss';
+
 :root {
   --transition-duration: 0.25s;
 
@@ -43,5 +46,7 @@
   --container-width: 120rem;
   --container-gutter: clamp(2.4rem, 5vw, 6rem);
   --content-width: 80rem;
+  --logo-height: clamp(2em, 5vw, 2.5em);
+  --header-height: calc(var(--logo-height) + #{spacer-clamped(0.75)});
   --spacer: 2rem;
 }

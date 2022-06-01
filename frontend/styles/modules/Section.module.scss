@@ -6,7 +6,7 @@
 @import '@/styles/tools/spacers.scss';
 
 .base {
-  --section-spacing: #{spacer-clamped(5)};
+  --section-spacing: #{spacer-clamped(6)};
 
   position: relative;
   padding-top: var(--section-spacing);
@@ -16,19 +16,11 @@
     flex: 1;
   }
 
-  .c-page-head + .o-wrapper &:first-child {
+  &:first-child {
     &::before {
       content: '';
       display: block;
-      height: 6.5rem;
-
-      @include bp(md) {
-        height: 6.8rem;
-      }
-
-      @include bp(lg) {
-        height: 10.8rem;
-      }
+      height: var(--header-height);
     }
   }
 }

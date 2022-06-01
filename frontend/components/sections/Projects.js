@@ -4,9 +4,9 @@ import Project from '@/components/Project'
 import Label from '@/components/partials/Label'
 import { Grid, GridItem } from '@/components/partials/Grid'
 
-export default function Projects({ title, projects }) {
+export default function Projects({ title, projects, slug }) {
   return (
-    <Section>
+    <Section slug={slug}>
       <Container>
         <Label>{title}</Label>
 

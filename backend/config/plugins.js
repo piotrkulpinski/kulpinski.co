@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = ({ env }) => ({
   menus: {
     config: {
       layouts: {
@@ -19,4 +19,12 @@ module.exports = {
       },
     },
   },
-};
+
+  sentry: {
+    enabled: true,
+
+    config: {
+      dsn: env('SENTRY_DSN'),
+    },
+  },
+});

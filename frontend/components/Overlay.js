@@ -10,13 +10,13 @@ export default function Overlay({ isOpen, items }) {
   const { contactOptions } = useContext(GlobalContext)
 
   return (
-    <aside className={`${cn(styles.base, { [styles.open]: isOpen })} u-hidden-xl`}>
+    <aside className={`${cn(styles.base, { [styles.open]: isOpen})} u-hidden-xl`}>
       <Container>
         <div className={styles.inner}>
           <Nav items={items} extraClass={styles.nav} />
 
           <div className={styles.contact}>
-            <Contact options={contactOptions} />
+            <Contact options={contactOptions} direction="rtl" />
           </div>
         </div>
       </Container>

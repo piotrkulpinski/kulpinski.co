@@ -6,6 +6,9 @@
   },
   "options": {},
   "attributes": {
+    "slug": {
+      "type": "string"
+    },
     "button": {
       "type": "component",
       "repeatable": false,

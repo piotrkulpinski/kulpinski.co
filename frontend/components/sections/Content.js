@@ -4,9 +4,9 @@ import Label from '@/components/partials/Label'
 import Copy from '@/components/partials/Copy'
 import { Grid, GridItem } from '@/components/partials/Grid'
 
-export default function Content({ content }) {
+export default function Content({ content, slug }) {
   return (
-    <Section>
+    <Section slug={slug}>
       <Container>
         <Grid separated>
           {content && content.map((cnt, index) =>

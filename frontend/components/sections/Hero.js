@@ -5,10 +5,9 @@ import Image from '@/components/partials/Image'
 import Heading from '@/components/partials/Heading'
 import styles from '@/styles/modules/Hero.module.scss'
 
-export default function Hero({ title, description, buttons, image }) {
-  console.log(image);
+export default function Hero({ title, description, buttons, image, slug }) {
   return (
-    <Section theme="dark">
+    <Section theme="dark" slug={slug}>
       <Container>
         <div className={styles.base}>
           <div className={styles.content}>

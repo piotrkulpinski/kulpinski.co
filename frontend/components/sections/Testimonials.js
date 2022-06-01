@@ -3,9 +3,9 @@ import Section from '@/components/Section'
 import Testimonial from '@/components/Testimonial'
 import Carousel from '@/components/partials/Carousel'
 
-export default function Projects({ testimonials }) {
+export default function Projects({ testimonials, slug }) {
   return (
-    <Section>
+    <Section slug={slug}>
       <Container>
         <Carousel>
           {testimonials.data && testimonials.data.map((testimonial, index) =>

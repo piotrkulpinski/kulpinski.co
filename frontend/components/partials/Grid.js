@@ -1,9 +1,13 @@
 import cn from 'classnames'
 import styles from '@/styles/modules/Grid.module.scss'
 
-export function Grid({ children, separated, narrow }) {
+export function Grid({ children, separated, narrow, direction }) {
   return (
-    <div className={cn(styles.base, {[styles.separated]: separated, [styles.narrow]: narrow })}>
+    <div className={cn(styles.base, {
+      [styles.separated]: separated,
+      [styles.narrow]: narrow,
+      [styles[direction]]: direction,
+    })}>
       {children}
     </div>
   )

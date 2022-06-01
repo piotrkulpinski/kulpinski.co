@@ -6,6 +6,9 @@
   },
   "options": {},
   "attributes": {
+    "slug": {
+      "type": "string"
+    },
     "projects": {
       "type": "relation",
       "relation": "oneToMany",

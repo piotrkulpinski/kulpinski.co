@@ -16,10 +16,8 @@
 .media {
   height: 1em;
   width: 1em;
-  margin-top: -1em;
-  margin-bottom: -1em;
   margin-right: 0.3em;
-  font-size: clamp(2em, 5vw, 2.5em);
+  font-size: var(--logo-height);
   transition-property: font-size;
   transition-duration: var(--transition-duration);
 
