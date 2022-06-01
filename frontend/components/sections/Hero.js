@@ -6,6 +6,7 @@ import Heading from '@/components/partials/Heading'
 import styles from '@/styles/modules/Hero.module.scss'
 
 export default function Hero({ title, description, buttons, image }) {
+  console.log(image);
   return (
     <Section theme="dark">
       <Container>
@@ -24,7 +25,7 @@ export default function Hero({ title, description, buttons, image }) {
             </div>}
           </div>
 
-          {image && <div className={styles.media}>
+          {image && image.data && <div className={styles.media}>
             <Image image={image.data} layout="raw" priority />
           </div>}
         </div>

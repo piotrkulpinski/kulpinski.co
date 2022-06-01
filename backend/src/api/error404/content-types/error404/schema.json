@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "error404s",
+  "info": {
+    "singularName": "error404",
+    "pluralName": "error404s",
+    "displayName": "404",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.content",
+        "sections.cta",
+        "sections.hero",
+        "sections.projects",
+        "sections.testimonials"
+      ]
+    }
+  }
+}
