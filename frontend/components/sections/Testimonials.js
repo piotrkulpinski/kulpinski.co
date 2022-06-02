@@ -1,9 +1,9 @@
-import Container from '@/components/Container'
-import Section from '@/components/Section'
-import Testimonial from '@/components/Testimonial'
-import Carousel from '@/components/partials/Carousel'
+import Container from '@/components/Container/Container'
+import Section from '@/components/Section/Section'
+import Testimonial from '@/components/Testimonial/Testimonial'
+import Carousel from '@/components/Carousel/Carousel'
 
-export default function Projects({ testimonials, slug }) {
+export default function TestimonialSection({ testimonials, slug }) {
   return (
     <Section slug={slug}>
       <Container>

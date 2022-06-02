@@ -1,10 +1,10 @@
-import Container from '@/components/Container'
-import Section from '@/components/Section'
-import Project from '@/components/Project'
-import Label from '@/components/partials/Label'
-import { Grid, GridItem } from '@/components/partials/Grid'
+import Container from '@/components/Container/Container'
+import Section from '@/components/Section/Section'
+import Project from '@/components/Project/Project'
+import Label from '@/components/Label/Label'
+import { Grid, GridItem } from '@/components/Grid/Grid'
 
-export default function Projects({ title, projects, slug }) {
+export default function ProjectsSection({ title, projects, slug }) {
   return (
     <Section slug={slug}>
       <Container>

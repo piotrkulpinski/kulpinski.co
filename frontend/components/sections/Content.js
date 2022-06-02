@@ -1,10 +1,10 @@
-import Container from '@/components/Container'
-import Section from '@/components/Section'
-import Label from '@/components/partials/Label'
-import Copy from '@/components/partials/Copy'
-import { Grid, GridItem } from '@/components/partials/Grid'
+import Container from '@/components/Container/Container'
+import Section from '@/components/Section/Section'
+import Label from '@/components/Label/Label'
+import Copy from '@/components/Copy/Copy'
+import { Grid, GridItem } from '@/components/Grid/Grid'
 
-export default function Content({ content, slug }) {
+export default function ContentSection({ content, slug }) {
   return (
     <Section slug={slug}>
       <Container>
