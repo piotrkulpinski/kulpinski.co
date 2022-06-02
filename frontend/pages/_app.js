@@ -1,38 +1,49 @@
+import App from 'next/app'
 import '@/styles/main.scss'
 import { createContext } from 'react'
 import { fetchAPI } from '@/lib/api'
 
 // Store Strapi Global object in context
-export const GlobalContext = createContext()
+export const GlobalContext = createContext({})
 
-function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
+  const { global, menus } = pageProps
+
   return (
-    <GlobalContext.Provider value={pageProps.global.attributes}>
+    <GlobalContext.Provider value={{ global: global.data.attributes, menus }}>
       <Component {...pageProps} />
     </GlobalContext.Provider>
   )
 }
 
-App.getInitialProps = async (ctx) => {
-  // Fetch global site settings from Strapi
-  const globalRes = await fetchAPI('/global', {
-    populate: {
-      defaultSeo: {
-        populate: '*',
-      },
-      contactButton: {
-        populate: '*',
-      },
-      contactOptions: {
-        populate: '*',
-      },
-      footerLinks: {
-        populate: '*',
-      },
-    },
-  })
+MyApp.getInitialProps = async (appContext) => {
+  const appProps = await App.getInitialProps(appContext)
 
-  return { pageProps: { global: globalRes.data } }
+  const [global, menus] = await Promise.all([
+    fetchAPI('/global', {
+      populate: {
+        defaultSeo: {
+          populate: '*',
+        },
+        contactButton: {
+          populate: '*',
+        },
+        contactOptions: {
+          populate: '*',
+        },
+        footerLinks: {
+          populate: '*',
+        },
+      },
+    }),
+    fetchAPI('/menus', {
+      nested: true,
+    }),
+  ])
+
+  return {
+    ...appProps, pageProps: { global, menus },
+  }
 }
 
-export default App
+export default MyApp

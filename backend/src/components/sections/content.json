@@ -11,6 +11,7 @@
       "type": "string"
     },
     "content": {
+      "displayName": "content",
       "type": "component",
       "repeatable": true,
       "component": "shared.content"

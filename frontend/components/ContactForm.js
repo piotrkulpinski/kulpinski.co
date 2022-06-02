@@ -6,15 +6,15 @@ import styles from '@/styles/modules/ContactForm.module.scss'
 import { GlobalContext } from '@/pages/_app'
 
 export default function ContactForm() {
-  const { contactTitle, contactDescription } = useContext(GlobalContext)
+  const { global } = useContext(GlobalContext)
 
   return (
     <div className={styles.base}>
       <div className={styles.column}>
-        {contactTitle && <Heading size="h2" tag="h3">{contactTitle}</Heading>}
+        {global.contactTitle && <Heading size="h2" tag="h3">{global.contactTitle}</Heading>}
 
-        {contactDescription && <div className={styles.content}>
-          <p>{contactDescription}</p>
+        {global.contactDescription && <div className={styles.content}>
+          <p>{global.contactDescription}</p>
         </div>}
 
         <div className={styles.form}>

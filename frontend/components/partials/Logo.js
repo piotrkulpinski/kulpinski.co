@@ -4,7 +4,7 @@ import styles from '@/styles/modules/Logo.module.scss'
 import { GlobalContext } from '@/pages/_app'
 
 export default function Logo({ isHome }) {
-  const { siteName, siteTagline } = useContext(GlobalContext)
+  const { global } = useContext(GlobalContext)
 
   return (
     <Link href="/">
@@ -16,8 +16,8 @@ export default function Logo({ isHome }) {
           <path d="M178.5 27.5c-83.2 0-151 67.7-151 151s67.8 151 151 151c83.3 0 151-67.7 151-151s-67.7-151-151-151zm-3.1 159.3s0 6.8-.3 8.7c-.4 4.4-1.2 8.8-2.5 13a61 61 0 01-13 25.2 33.2 33.2 0 01-46.5-.3c-10-10-16.3-26.6-20-40a155.3 155.3 0 01-5.4-40.2c0-50.6 27-70 46.5-74.5 5-1.2 10.2-1.7 15.3-1.9A59 59 0 01198.2 96c21.1 24.7 13 56.4 11.5 61a42.2 42.2 0 01-30.8 29l-3.5.8zm56.2 81c-20.1-4.1-30.1-21-32.3-43.7-.9-9.1-1.6-11.8-1.6-16.6 21.8-7 40-25.1 42-62.4a73.3 73.3 0 00-9.7-41.6c24 12.5 33 50.2 28.5 70.5-8.6 39.6-35.7 46.7-37 46.4.1 14.5 7.2 32 24.3 31 15.5-.8 18-21.7 10.4-29 18.5 7.7 8.8 52-24.6 45.3z"/>
         </svg>
 
-        {isHome && <h1>{siteName}<span className="u-hidden-visually">– {siteTagline}</span></h1>}
-        {!isHome && siteName}
+        {isHome && <h1>{global.siteName}<span className="u-hidden-visually">– {global.siteTagline}</span></h1>}
+        {!isHome && global.siteName}
       </a>
     </Link>
   )

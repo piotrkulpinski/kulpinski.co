@@ -5,20 +5,20 @@ import Section from '@/components/Section'
 import Container from '@/components/Container'
 import Contact from '@/components/Contact'
 import Heading from '@/components/partials/Heading'
+import Menu from '@/components/partials/Menu'
 import styles from '@/styles/modules/Footer.module.scss'
 
 export default function Footer() {
-  const { siteName, contactOptions, footerLinks } = useContext(GlobalContext)
+  const { global } = useContext(GlobalContext)
 
   return (
     <Section theme="light">
       <Container>
         <div className={styles.base}>
-          {contactOptions && <>
+          {global.contactOptions && <>
             <div className={styles.contact}>
               <Heading size="h3">Have a project in mind? Let's connect.</Heading>
-              <Contact options={contactOptions} />
-
+              <Contact options={global.contactOptions} />
             </div>
 
             <div className={styles.separator}></div>
@@ -26,10 +26,12 @@ export default function Footer() {
 
           <nav className={styles.bottom}>
             <p className={styles.copy}>
-              &copy; 2008–{new Date().getFullYear()}&ensp;&ndash;&ensp;{siteName}
+              &copy; 2008–{new Date().getFullYear()}&ensp;&ndash;&ensp;{global.siteName}
             </p>
 
-            {footerLinks && footerLinks.map((link, index) =>
+            <Menu menu="footer" />
+
+            {global.footerLinks && global.footerLinks.map((link, index) =>
               <Link href={link.url} key={index}>
                 <a target={link.target}>{link.title}</a>
               </Link>

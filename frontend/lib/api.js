@@ -23,7 +23,7 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
   const mergedOptions = {
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `bearer ${process.env.API_TOKEN}`
+      'Authorization': `bearer ${process.env.API_TOKEN || '0ef7d832be7ec3452672d400c8e36ec141536c4e0819fd950fd7f95f1978dfe625042f6c237b433fe804a862044a3c64020284afe4dd55895edcfd701a0e58d16666ce17e5d6f2106f5e1c58ba2181a50d50170d79cdfbe1697d8a0681db0051e2bc7f36758278d1fe2620ffa8a51d2611f3dd8b70fb7ab2ebfbeca25eac9196'}`
     },
     ...options,
   }

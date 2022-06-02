@@ -28,6 +28,15 @@
         }
       }
     },
+    "siteTagline": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
     "defaultSeo": {
       "type": "component",
       "repeatable": false,
@@ -50,15 +59,6 @@
         }
       }
     },
-    "siteTagline": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
-    },
     "contactOptions": {
       "displayName": "contactOptions",
       "type": "component",
@@ -69,16 +69,6 @@
         }
       },
       "component": "shared.contact-options"
-    },
-    "footerLinks": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.contact-button"
     },
     "contactTitle": {
       "pluginOptions": {

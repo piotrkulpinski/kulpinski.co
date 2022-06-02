@@ -11,6 +11,7 @@
   position: relative;
   padding-top: var(--section-spacing);
   padding-bottom: var(--section-spacing);
+  scroll-margin-top: var(--logo-height);
 
   &:only-child {
     flex: 1;
@@ -29,7 +30,7 @@
   background-color: var(--color-white);
 
   & + & {
-    padding-top: 0;
+    margin-top: calc(var(--section-spacing) * -1);
   }
 }
 
