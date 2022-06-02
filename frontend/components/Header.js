@@ -36,7 +36,7 @@ export default function Header() {
           <Nav items={menuItems} extraClass="u-visible-xl-flex" />
           <Hamburger isOverlayOpen={isOverlayOpen} clickHandler={toggleOverlay} />
 
-          {contactButton && <div className={`${styles.cta} u-visible-sm-block`}>
+          {contactButton && <div className="u-visible-sm-block">
             <Button button={contactButton} size="small" />
           </div>}
         </div>

@@ -6,7 +6,7 @@
 
 .base {
   display: grid;
-  gap: var(--column-gutter);
+  gap: calc(var(--column-gutter) * 0.5);
   width: 100%;
   max-width: var(--content-width);
 
@@ -16,7 +16,7 @@
 }
 
 .separated {
-  gap: calc(var(--column-gutter) * 2);
+  gap: var(--column-gutter);
 }
 
 .narrow {

@@ -1,0 +1,66 @@
+/*
+** Modal
+** -----------------------------------------------------------------------------*/
+
+@import '@/styles/tools/breakpoints.scss';
+@import '@/styles/tools/spacers.scss';
+
+.base {
+  position: fixed;
+  inset: 0;
+  z-index: var(--layer-popup);
+  background-color: rgba(35, 35, 45, 0.5);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  top: spacer-clamped(2);
+  right: spacer-clamped(2);
+  z-index: var(--layer-popup);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  @include bp(lg) {
+    color: var(--color-white);
+  }
+}
+
+.icon {
+  display: block;
+  height: 1em;
+  width: 1em;
+
+  * {
+    fill: currentColor;
+    stroke: none;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  width: calc(100% - (2 * var(--container-gutter)));
+  max-width: var(--container-width);
+  max-height: calc(100% - (2 * var(--container-gutter)));
+  background-color: var(--color-white);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.inner {
+  width: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
