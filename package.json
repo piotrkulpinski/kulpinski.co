@@ -1,16 +1,28 @@
 {
-  "name": "kulpinski.co-next",
+  "name": "frontend",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
   "scripts": {
-    "dev:backend": "yarn --cwd backend dev",
-    "dev:frontend": "wait-on http://localhost:1337/admin && yarn --cwd frontend dev",
-    "dev": "cross-env FORCE_COLOR=1 npm-run-all -l -p dev:*"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@formspree/react": "^2.2.5",
+    "@netlify/plugin-nextjs": "^4.7.1",
+    "classnames": "^2.3.1",
+    "flickity": "^2.3.0",
+    "next": "12.1.6",
+    "qs": "^6.10.3",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-flickity-component": "^3.6.2",
+    "react-markdown": "^8.0.3",
+    "sass": "^1.52.1"
   },
   "devDependencies": {
-    "cross-env": "7.0.3",
-    "npm-run-all": "4.1.5",
-    "wait-on": "5.2.1"
-  },
-  "dependencies": {}
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6"
+  }
 }
