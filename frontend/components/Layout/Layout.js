@@ -1,6 +1,6 @@
 import Header from '@components/Header/Header'
 import Footer from '@components/Footer/Footer'
-import { ModalProvider } from '@context/modalContext'
+import { ModalProvider } from '@context/ModalContext'
 import styles from './Layout.module.scss'
 
 export default function Layout({ children }) {

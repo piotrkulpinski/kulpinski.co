@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useContext } from 'react'
 import { createPortal } from 'react-dom'
 import ContactForm from '@components/ContactForm/ContactForm'
-import { ModalContext } from '@context/modalContext'
+import { ModalContext } from '@context/ModalContext'
 import styles from './Modal.module.scss'
 
 export default function Modal() {
