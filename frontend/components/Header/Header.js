@@ -16,12 +16,10 @@ export default function Header() {
   const { global } = useContext(GlobalContext)
 
   useEffect(() => {
+    isCondensed()
     window.addEventListener('scroll', isCondensed)
-    window.addEventListener('load', isCondensed)
-    return () => {
-      window.removeEventListener('scroll', isCondensed)
-      window.removeEventListener('load', isCondensed)
-    }
+
+    return () => window.removeEventListener('scroll', isCondensed)
   })
 
   const isCondensed = () => {
