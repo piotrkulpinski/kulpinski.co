@@ -1,13 +1,13 @@
 import Layout from '@components/Layout/Layout'
 import Seo from '@components/Seo/Seo'
-import SectionsManager from '@components/Sections/Manager'
+import SectionManager from '@components/SectionManager/SectionManager'
 import { fetchAPI } from '@lib/api'
 
 export default function Error404({ error404 }) {
   return (
     <Layout>
       <Seo seo={error404.attributes.seo} />
-      <SectionsManager sections={error404.attributes.sections} />
+      <SectionManager sections={error404.attributes.sections} />
     </Layout>
   )
 }

@@ -1,13 +1,13 @@
 import Layout from '@components/Layout/Layout'
 import Seo from '@components/Seo/Seo'
-import SectionsManager from '@components/Sections/Manager'
+import SectionManager from '@components/SectionManager/SectionManager'
 import { fetchAPI } from '@lib/api'
 
 export default function Home({ home }) {
   return (
     <Layout>
       <Seo seo={home.attributes.seo} />
-      <SectionsManager sections={home.attributes.sections} />
+      <SectionManager sections={home.attributes.sections} />
     </Layout>
   )
 }
