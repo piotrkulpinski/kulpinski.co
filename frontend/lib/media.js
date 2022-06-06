@@ -1,4 +1,4 @@
-import { getStrapiURL } from "@/lib/api"
+import { getStrapiURL } from '@lib/api'
 
 export function getStrapiMedia(media) {
   if (!media) {

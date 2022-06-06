@@ -7,16 +7,16 @@ import styles from './Modal.module.scss'
 export default function Modal() {
   let { handleModal, modal } = useContext(ModalContext)
 
-  const escFunction = useCallback((event) => {
+  const handleEscKey = useCallback((event) => {
     if (event.key === 'Escape') {
       handleModal(false)
     }
-  }, [])
+  }, [handleModal])
 
   useEffect(() => {
-    document.addEventListener('keydown', escFunction, false)
-    return () => document.removeEventListener('keydown', escFunction, false)
-  }, [])
+    document.addEventListener('keydown', handleEscKey, false)
+    return () => document.removeEventListener('keydown', handleEscKey, false)
+  }, [handleEscKey])
 
   if (modal) {
     return createPortal(

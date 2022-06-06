@@ -12,7 +12,7 @@ export default function Image({ image, layout, priority, className }) {
       // objectFit='contain'
       priority={priority ?? false}
       src={getStrapiMedia(image)}
-      alt={alternativeText}
+      alt={alternativeText ?? ''}
       className={className}
     />
   )

@@ -13,7 +13,7 @@ export default function Profile({ profile }) {
           <span className={styles.role}>{profile.role}</span>
 
           {profile.website
-            ? <a href={profile.website} rel="noopener" target="_blank" tabIndex="-1" className={styles.link}>
+            ? <a href={profile.website} rel="noreferrer noopener" target="_blank" tabIndex="-1" className={styles.link}>
                 {profile.company}
               </a>
             : profile.company

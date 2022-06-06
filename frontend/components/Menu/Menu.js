@@ -11,7 +11,7 @@ export default function Menu({ menu, extraClass }) {
       const response = await fetchAPI(`/menus/${menu}`)
       setItems(response.menu.items)
     })()
-  }, [])
+  }, [menu])
 
   return (
     items && <nav className={`${styles.base} ${extraClass ?? ''}`}>

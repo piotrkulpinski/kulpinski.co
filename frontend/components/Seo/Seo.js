@@ -1,7 +1,7 @@
-import Head from "next/head"
-import { useContext } from "react"
-import { GlobalContext } from "@/pages/_app"
-import { getStrapiMedia } from "@/lib/media"
+import Head from 'next/head'
+import { useContext } from 'react'
+import { GlobalContext } from '@pages/_app'
+import { getStrapiMedia } from '@lib/media'
 
 export default function Seo({ seo }) {
   const { global } = useContext(GlobalContext)

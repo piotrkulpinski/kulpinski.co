@@ -5,7 +5,7 @@ export default function Project({ project }) {
   return (
     <div className={styles.base}>
       <Heading size="h4" tag="h4">
-        <a href={project.website} rel="noopener" target="_blank">
+        <a href={project.website} rel="noreferrer noopener" target="_blank">
           {project.name}
         </a>
       </Heading>
