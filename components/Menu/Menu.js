@@ -9,7 +9,10 @@ export default function Menu({ menu, extraClass }) {
   useEffect(() => {
     (async () => {
       const response = await fetchAPI(`/menus/${menu}`)
-      setItems(response.menu.items)
+
+      if (response) {
+        setItems(response.menu.items.sort((a, b) => a.order - b.order))
+      }
     })()
   }, [menu])
 

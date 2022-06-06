@@ -4,7 +4,7 @@ import styles from './Profile.module.scss'
 export default function Profile({ profile }) {
   return (
     <div className={styles.base}>
-      {profile.image && <Image image={profile.image.data} layout="raw" className={styles.image} />}
+      {profile.image.data && <Image image={profile.image.data} layout="raw" className={styles.image} />}
 
       <div className="t-sm">
         <strong>{profile.name}</strong>
