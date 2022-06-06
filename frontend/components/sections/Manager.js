@@ -28,12 +28,12 @@ const getSectionComponent = ({ __component, ...rest }, index) => {
   return Section && <Section key={`index-${index}`} {...rest} />
 }
 
-const SectionManager = ({ sections }) => {
+const SectionsManager = ({ sections }) => {
   return sections.map(getSectionComponent)
 }
 
-SectionManager.defaultProps = {
+SectionsManager.defaultProps = {
   sections: [],
 }
 
-export default SectionManager
+export default SectionsManager
