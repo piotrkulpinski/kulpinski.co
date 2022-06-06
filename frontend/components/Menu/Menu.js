@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from './Menu.module.scss'
-import { fetchAPI } from '@/lib/api'
+import { fetchAPI } from '@lib/api'
 
 export default function Menu({ menu, extraClass }) {
   const [items, setItems] = useState([])

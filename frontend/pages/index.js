@@ -1,7 +1,7 @@
-import Layout from '@/components/Layout/Layout'
-import Seo from '@/components/Seo/Seo'
-import SectionManager from '@/components/Sections/Manager'
-import { fetchAPI } from '@/lib/api'
+import Layout from '@components/Layout/Layout'
+import Seo from '@components/Seo/Seo'
+import SectionManager from '@components/Sections/Manager'
+import { fetchAPI } from '@lib/api'
 
 export default function Home({ home }) {
   return (

@@ -2,8 +2,8 @@
 ** Section
 ** -----------------------------------------------------------------------------*/
 
-@import '@/styles/tools/breakpoints.scss';
-@import '@/styles/tools/spacers.scss';
+@import '@styles/tools/breakpoints.scss';
+@import '@styles/tools/spacers.scss';
 
 .base {
   --section-spacing: #{spacer-clamped(6)};

@@ -1,7 +1,7 @@
 import cn from 'classnames'
 import Link from 'next/link'
 import { useContext } from 'react'
-import { ModalContext } from '@/context/modalContext'
+import { ModalContext } from '@context/modalContext'
 import styles from './Button.module.scss'
 
 export default function Button({ button, size, disabled }) {

@@ -1,4 +1,4 @@
-import Image from '@/components/Image/Image'
+import Image from '@components/Image/Image'
 import styles from './Profile.module.scss'
 
 export default function Profile({ profile }) {

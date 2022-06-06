@@ -1,5 +1,5 @@
 import NextImage from 'next/image'
-import { getStrapiMedia } from '@/lib/media'
+import { getStrapiMedia } from '@lib/media'
 
 export default function Image({ image, layout, priority, className }) {
   const { alternativeText, width, height } = image.attributes

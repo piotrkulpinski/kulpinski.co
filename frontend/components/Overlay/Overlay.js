@@ -1,10 +1,10 @@
 import { useContext } from 'react'
 import cn from 'classnames'
-import Container from '@/components/Container/Container'
-import Contact from '@/components/Contact/Contact'
-import Menu from '@/components/Menu/Menu'
+import Container from '@components/Container/Container'
+import Contact from '@components/Contact/Contact'
+import Menu from '@components/Menu/Menu'
 import styles from './Overlay.module.scss'
-import { GlobalContext } from '@/pages/_app'
+import { GlobalContext } from '@pages/_app'
 
 export default function Overlay({ isOpen }) {
   const { global } = useContext(GlobalContext)

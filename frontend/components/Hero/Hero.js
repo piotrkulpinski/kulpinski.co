@@ -1,6 +1,6 @@
-import Button from '@/components/Button/Button'
-import Image from '@/components/Image/Image'
-import Heading from '@/components/Heading/Heading'
+import Button from '@components/Button/Button'
+import Image from '@components/Image/Image'
+import Heading from '@components/Heading/Heading'
 import styles from './Hero.module.scss'
 
 export default function Hero({ title, description, buttons, image }) {

@@ -1,5 +1,5 @@
-import Heading from '@/components/Heading/Heading'
-import Profile from '@/components/Profile/Profile'
+import Heading from '@components/Heading/Heading'
+import Profile from '@components/Profile/Profile'
 import styles from './Testimonial.module.scss'
 
 export default function Testimonial({ profile, quote }) {

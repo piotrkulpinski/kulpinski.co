@@ -1,10 +1,10 @@
 import { useContext } from 'react'
-import { GlobalContext } from '@/pages/_app'
-import Section from '@/components/Section/Section'
-import Container from '@/components/Container/Container'
-import Contact from '@/components/Contact/Contact'
-import Heading from '@/components/Heading/Heading'
-import Menu from '@/components/Menu/Menu'
+import { GlobalContext } from '@pages/_app'
+import Section from '@components/Section/Section'
+import Container from '@components/Container/Container'
+import Contact from '@components/Contact/Contact'
+import Heading from '@components/Heading/Heading'
+import Menu from '@components/Menu/Menu'
 import styles from './Footer.module.scss'
 
 export default function Footer() {

@@ -1,4 +1,4 @@
-import Heading from '@/components/Heading/Heading'
+import Heading from '@components/Heading/Heading'
 import styles from './Project.module.scss'
 
 export default function Project({ project }) {

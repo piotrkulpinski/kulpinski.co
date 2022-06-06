@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import { useForm, ValidationError } from '@formspree/react'
-import Button from '@/components/Button/Button'
+import Button from '@components/Button/Button'
 import styles from './Form.module.scss'
 
 export default function Form({ confirmation }) {

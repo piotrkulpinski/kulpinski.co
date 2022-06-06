@@ -1,8 +1,8 @@
 import App from 'next/app'
 import { FormspreeProvider } from '@formspree/react'
-import '@/styles/main.scss'
+import '@styles/main.scss'
 import { createContext } from 'react'
-import { fetchAPI } from '@/lib/api'
+import { fetchAPI } from '@lib/api'
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})

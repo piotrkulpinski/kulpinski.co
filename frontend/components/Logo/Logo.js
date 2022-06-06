@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import Link from 'next/link'
 import styles from './Logo.module.scss'
-import { GlobalContext } from '@/pages/_app'
+import { GlobalContext } from '@pages/_app'
 
 export default function Logo({ isHome }) {
   const { global } = useContext(GlobalContext)

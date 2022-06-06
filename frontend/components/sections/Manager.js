@@ -1,8 +1,8 @@
-import Hero from '@/components/Sections/Hero'
-import Cta from '@/components/Sections/Cta'
-import Content from '@/components/Sections/Content'
-import Projects from '@/components/Sections/Projects'
-import Testimonials from '@/components/Sections/Testimonials'
+import Hero from '@components/Sections/Hero'
+import Cta from '@components/Sections/Cta'
+import Content from '@components/Sections/Content'
+import Projects from '@components/Sections/Projects'
+import Testimonials from '@components/Sections/Testimonials'
 
 const getSectionComponent = ({ __component, ...rest }, index) => {
   let Section

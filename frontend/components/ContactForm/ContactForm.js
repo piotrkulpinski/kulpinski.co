@@ -1,11 +1,11 @@
 import { useState, useEffect, useContext } from 'react'
 import cn from 'classnames'
-import Form from '@/components/Form/Form'
-import Heading from '@/components/Heading/Heading'
-import Testimonial from '@/components/Testimonial/Testimonial'
+import Form from '@components/Form/Form'
+import Heading from '@components/Heading/Heading'
+import Testimonial from '@components/Testimonial/Testimonial'
 import styles from './ContactForm.module.scss'
-import { GlobalContext } from '@/pages/_app'
-import { fetchAPI } from '@/lib/api'
+import { GlobalContext } from '@pages/_app'
+import { fetchAPI } from '@lib/api'
 
 export default function ContactForm() {
   const { global } = useContext(GlobalContext)

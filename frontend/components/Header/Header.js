@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState, useCallback } from 'react'
 import cn from 'classnames'
-import Container from '@/components/Container/Container'
-import Overlay from '@/components/Overlay/Overlay'
-import Button from '@/components/Button/Button'
-import Logo from '@/components/Logo/Logo'
-import Menu from '@/components/Menu/Menu'
-import Hamburger from '@/components/Hamburger/Hamburger'
+import Container from '@components/Container/Container'
+import Overlay from '@components/Overlay/Overlay'
+import Button from '@components/Button/Button'
+import Logo from '@components/Logo/Logo'
+import Menu from '@components/Menu/Menu'
+import Hamburger from '@components/Hamburger/Hamburger'
 import styles from './Header.module.scss'
-import { GlobalContext } from '@/pages/_app'
+import { GlobalContext } from '@pages/_app'
 
 export default function Header() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false)

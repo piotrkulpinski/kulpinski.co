@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Grid, GridItem } from '@/components/Grid/Grid'
+import { Grid, GridItem } from '@components/Grid/Grid'
 
 export default function Contact({ options, direction }) {
   return (
