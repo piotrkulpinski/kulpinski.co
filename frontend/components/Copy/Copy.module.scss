@@ -4,19 +4,9 @@
 
 @import '@/styles/tools/breakpoints.scss';
 @import '@/styles/tools/spacers.scss';
-@import '@/styles/placeholders/heading.scss';
-@import '@/styles/placeholders/underline.scss';
 
 .base {
-  @for $i from 1 through 5 {
-    h#{$i} {
-      @include spacer-relative;
-      @extend %heading !optional;
-      @extend %heading-h#{$i} !optional;
-    }
-  }
-
-  p, ul, ol, table, address, form {
+  h1, h2, h3, p, ul, ol, table, address, form {
     &:not([class]) {
       @include spacer-relative;
     }
@@ -40,7 +30,11 @@
 
   a {
     &:not([class]) {
-      @extend %underline;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 0.75;
+      }
     }
   }
 

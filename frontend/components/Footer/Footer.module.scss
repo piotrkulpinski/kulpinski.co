@@ -3,7 +3,6 @@
 ** -----------------------------------------------------------------------------*/
 
 @import '@/styles/tools/breakpoints.scss';
-@import '@/styles/placeholders/underline.scss';
 
 .base,
 .contact {
@@ -16,7 +15,11 @@
   max-width: var(--content-width);
 
   a {
-    @extend %underline;
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.75;
+    }
   }
 }
 

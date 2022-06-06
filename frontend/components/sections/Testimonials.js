@@ -8,9 +8,10 @@ export default function TestimonialSection({ testimonials, slug }) {
     <Section slug={slug}>
       <Container>
         <Carousel>
-          {testimonials.data && testimonials.data.map((testimonial, index) =>
-            <Testimonial testimonial={testimonial.attributes} key={index} />
-          )}
+          {testimonials.data && testimonials.data.map((testimonial, index) => {
+            const { quotes, ...profile } = testimonial.attributes
+            return <Testimonial profile={profile} quote={quotes[0]} key={index} />
+          })}
         </Carousel>
       </Container>
     </Section>

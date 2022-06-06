@@ -2,36 +2,46 @@
 ** Heading
 ** -----------------------------------------------------------------------------*/
 
-@import '@/styles/tools/breakpoints.scss';
-@import '@/styles/placeholders/heading.scss';
-@import '@/styles/placeholders/underline.scss';
-
 .base {
-  @extend %heading;
+  font-size: clamp(var(--minFontSize), var(--scaler, 1vw), var(--maxFontSize));
+  font-family: var(--font-space);
+  font-weight: 700;
+  line-height: 1.4;
 
   em, strong {
     font-weight: 800;
   }
 
   a {
-    @extend %underline;
-  }
+    text-decoration: underline;
 
-  small {
-    display: inline-block;
-    font-size: 0.8em;
-    font-weight: 400;
-    opacity: 0.66;
-
-    &::before {
-      content: ' — ';
+    &:hover {
+      opacity: 0.75;
     }
   }
 }
 
-/* Size variants */
-@for $i from 1 through 6 {
-  .h#{$i} {
-    @extend %heading-h#{$i} !optional;
-  }
+.h1 {
+  --minFontSize: 3.6rem;
+  --maxFontSize: 5.2rem;
+  --scaler: 4.4vw;
+  line-height: 1.2;
+}
+
+.h2 {
+  --minFontSize: 2.8rem;
+  --maxFontSize: 3.6rem;
+  --scaler: 3.2vw;
+}
+
+.h3 {
+  --minFontSize: 2.6rem;
+  --maxFontSize: 3rem;
+  --scaler: 2.8vw;
+}
+
+.h4 {
+  --minFontSize: 2.1rem;
+  --maxFontSize: 2.4rem;
+  --scaler: 2.25vw;
 }

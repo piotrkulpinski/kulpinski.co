@@ -17,7 +17,11 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener('scroll', isCondensed)
-    return () => window.removeEventListener('scroll', isCondensed)
+    window.addEventListener('load', isCondensed)
+    return () => {
+      window.removeEventListener('scroll', isCondensed)
+      window.removeEventListener('load', isCondensed)
+    }
   })
 
   const isCondensed = () => {

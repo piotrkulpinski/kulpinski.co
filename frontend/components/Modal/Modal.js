@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useCallback, useEffect, useContext } from 'react'
 import { createPortal } from 'react-dom'
 import ContactForm from '@/components/ContactForm/ContactForm'
 import { ModalContext } from '@/context/modalContext'
@@ -6,6 +6,20 @@ import styles from './Modal.module.scss'
 
 export default function Modal() {
   let { handleModal, modal } = useContext(ModalContext)
+
+  const escFunction = useCallback((event) => {
+    if (event.key === 'Escape') {
+      handleModal(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener('keydown', escFunction, false);
+
+    return () => {
+      document.removeEventListener('keydown', escFunction, false);
+    };
+  }, []);
 
   if (modal) {
     return createPortal(
