@@ -1,0 +1,16 @@
+{
+  "forms": {
+    "contactForm": {
+      "name": "Get in touch",
+      "actions": [{
+        "type": "email",
+        "to": "piotr@kulpinski.pl"
+      }],
+      "fields": {
+        "name": { "required": true, "type": "text" },
+        "email": { "required": true, "type": "email" },
+        "message": { "required": true, "type": "text" }
+      }
+    }
+  }
+}

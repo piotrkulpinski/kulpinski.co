@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
-  const fontsUrl = '//fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@400;600;700&display=optional'
+  const fontsUrl = '//fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap'
 
   return (
     <Html>
@@ -15,6 +15,7 @@ export default function Document() {
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
 
         {/* Google Fonts */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href={fontsUrl} />
       </Head>
       <body>

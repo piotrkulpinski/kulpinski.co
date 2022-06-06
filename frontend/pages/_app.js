@@ -1,4 +1,5 @@
 import App from 'next/app'
+import { FormspreeProvider } from '@formspree/react'
 import '@/styles/main.scss'
 import { createContext } from 'react'
 import { fetchAPI } from '@/lib/api'
@@ -11,7 +12,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <GlobalContext.Provider value={{ global: global.data.attributes, menus }}>
-      <Component {...pageProps} />
+      <FormspreeProvider project={process.env.NEXT_PUBLIC_FORMSPREE_PROJECT_ID}>
+        <Component {...pageProps} />
+      </FormspreeProvider>
     </GlobalContext.Provider>
   )
 }

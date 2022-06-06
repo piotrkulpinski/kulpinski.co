@@ -93,6 +93,14 @@
         }
       },
       "type": "string"
+    },
+    "contactConfirmation": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }

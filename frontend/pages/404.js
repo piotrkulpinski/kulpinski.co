@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout/Layout'
 import Seo from '@/components/Seo/Seo'
-import SectionManager from '@/components/SectionManager/SectionManager'
+import SectionManager from '@/components/Sections/Manager'
 import { fetchAPI } from '@/lib/api'
 
 export default function Error404({ error404 }) {

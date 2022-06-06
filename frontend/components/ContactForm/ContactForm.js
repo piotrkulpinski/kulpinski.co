@@ -18,7 +18,7 @@ export default function ContactForm() {
         </div>}
 
         <div className={styles.form}>
-          <Form />
+          <Form confirmation={global.contactConfirmation} />
         </div>
       </div>
 

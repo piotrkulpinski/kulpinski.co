@@ -40,6 +40,10 @@
       border-width: 7px;
     }
   }
+
+  &[disabled] {
+    cursor: default;
+  }
 }
 
 // Sizes

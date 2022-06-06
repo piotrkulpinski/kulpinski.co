@@ -4,7 +4,22 @@
 
 @import '@/styles/tools/breakpoints.scss';
 
-.base {
+.isLoading {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: calc(var(--layer-base) + 1);
+    background-image: url('/loader-dark.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+}
+
+.content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75em;
@@ -13,10 +28,10 @@
   @include bp(md) {
     gap: 1em;
   }
+}
 
-  .is-loading & {
-    opacity: 0.25;
-  }
+.contentIsLoading {
+  opacity: 0.25;
 }
 
 .input {
@@ -68,26 +83,14 @@
 }
 
 .message {
-  &[data-status="success"] {
-    color: var(--color-success);
-  }
-
-  &[data-status="error"] {
-    color: var(--color-error);
-  }
+  color: var(--color-success);
 }
 
-.parsley-errors-list[class] {
-  margin-top: 0;
-  padding-left: 0;
-  list-style: none;
+.error {
+  color: var(--color-error);
+  font-size: 1.4rem;
 
-  &.filled {
-    color: var(--color-error);
-    font-size: 1.4rem;
-
-    &:not(:first-child) {
-      margin-top: 0.5rem;
-    }
+  &:not(:first-child) {
+    margin-top: 0.5rem;
   }
 }

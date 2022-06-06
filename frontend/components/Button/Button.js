@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { ModalContext } from '@/context/modalContext'
 import styles from './Button.module.scss'
 
-export default function Button({ button, size }) {
+export default function Button({ button, size, disabled }) {
   let { handleModal } = useContext(ModalContext)
   let classes = cn(styles.base, styles[size ?? 'medium'])
 
@@ -19,7 +19,7 @@ export default function Button({ button, size }) {
       {button.title}
     </button>,
 
-    submit: <button className={classes} type="submit">
+    submit: <button className={classes} type="submit" disabled={disabled}>
       {button.title}
     </button>,
   }
