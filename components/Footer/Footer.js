@@ -28,7 +28,7 @@ export default function Footer() {
               &copy; 2008–{new Date().getFullYear()}&ensp;&ndash;&ensp;{global.siteName}
             </p>
 
-            <Menu menu="footer" />
+            <Menu menu="footer" ghostStyle />
           </nav>
         </div>
       </Container>

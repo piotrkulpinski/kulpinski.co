@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import { useContext } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { GlobalContext } from '@pages/_app'
 import { getStrapiMedia } from '@lib/media'
 
 export default function Seo({ seo }) {
+  const [currentUrl, setCurrentUrl] = useState()
   const { global } = useContext(GlobalContext)
   const seoWithDefaults = {
     ...global.defaultSeo,
@@ -17,8 +18,13 @@ export default function Seo({ seo }) {
     shareImage: getStrapiMedia(seoWithDefaults.shareImage.data),
   }
 
+  useEffect(() => {
+    setCurrentUrl(document.URL);
+  }, [])
+
   return (
     <Head>
+      {currentUrl && <meta property="og:url" content={currentUrl} />}
       {fullSeo.metaTitle && (
         <>
           <title>{fullSeo.metaTitle}</title>
@@ -40,7 +46,10 @@ export default function Seo({ seo }) {
           <meta name="image" content={fullSeo.shareImage} />
         </>
       )}
-      {fullSeo.article && <meta property="og:type" content="article" />}
+      {fullSeo.article
+        ? <meta property="og:type" content="article" />
+        : <meta property="og:type" content="website" />
+      }
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
   )

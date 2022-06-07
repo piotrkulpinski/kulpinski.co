@@ -15,6 +15,10 @@
   }
 }
 
+.ghost {
+  display: contents;
+}
+
 .link {
   display: block;
   font-family: var(--font-space);
